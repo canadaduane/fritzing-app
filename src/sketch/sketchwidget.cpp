@@ -9718,7 +9718,7 @@ void SketchWidget::alignItems(Qt::Alignment alignment) {
     QList<ItemBase *> boundingItems = lockedItems.count() > 0 ?
         lockedItems : m_savedItems.values();
 
-    if (boundingItems.count() < 1 || m_savedItems.count() < 2) return;
+    if (boundingItems.count() == 0 || m_savedItems.count() == 0) return;
 
     int count = 0;
     double left = std::numeric_limits<int>::max();
